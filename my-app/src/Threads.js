@@ -1,9 +1,12 @@
 import React from 'react';
+import Comments from './Comments';
 
 const Threads = () => (
 
 
-<div> <h1>Thread</h1></div>
+<div> <h2>Thread</h2>
+<Comments/>
+</div>
 
 );
 

@@ -1,8 +1,13 @@
 import React from 'react';
+import Likes from './Likes';
 
 const Comments = () => (
-<div><h1>Comments</h1></div>
+<div><h3>Comments</h3>
+<Likes/>
+</div>
 
 );
+
+   
 
 export default Comments;
