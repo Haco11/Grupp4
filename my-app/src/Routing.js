@@ -1,4 +1,4 @@
-
+import React from "react";
 import {Route, BrowserRouter as Router, Link} from "react-router-dom"
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact"
@@ -13,7 +13,7 @@ function App() {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/forum">Forum</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
-            </ul>
+            </ul> 
           </nav>
         <Route path="/" exact component={Home}/>
         <Route path="/Forum" component={Forum}/>
