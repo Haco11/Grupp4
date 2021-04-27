@@ -6,9 +6,6 @@ import Comments from './Comments';
 import Category from './Category';
 
 
-
-
-
 const App1 = () => 
    <div>
      <Category/>
