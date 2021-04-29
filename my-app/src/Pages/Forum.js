@@ -1,11 +1,20 @@
 import React from 'react';
 import Category from '../Category'
 
-export default function Forum() {
+
+
+const Forum = () => (
+
+
+  <div> 
+   <h1>Forum</h1>
+  <li>
+  <Category/>
+  </li>
+  </div>
     
-   <div>
-      <h1>Forum</h1>
-       <Category/>
-   </div>
-   
-}
+  );
+  
+  
+  
+  export default Forum;
