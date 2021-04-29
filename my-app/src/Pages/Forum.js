@@ -1,9 +1,11 @@
 import React from 'react';
+import Category from '../Category'
 
 export default function Forum() {
-    return (
-        <div>
-            <h1>Forum</h1>
-        </div>
-    );
+    
+   <div>
+      <h1>Forum</h1>
+       <Category/>
+   </div>
+   
 }
