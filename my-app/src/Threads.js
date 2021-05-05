@@ -1,17 +1,36 @@
-import React from 'react';
-import Comments from './Comments';
+import React, { useEffect , useState } from 'react';
+import axios from 'axios';
+import ThreadsTable from '../ThreadsTable'
 
-const Threads = () => (
+const Threads = () => 
+{
 
+    const [elements, setElements] = useState([])
+    const [isLoading, setIsLoading] = useState (true)
+    
+    useEffect(() => {
+       const fetchElements = async () => {
+         const result = await axios(`https://forum-api-jkrop.ondigitalocean.app/category/60925471e747d9001dee977f/thread
 
-<div> <h2>Threads</h2>
-<p>Threads will be hidden and shown only when we choose a cateory</p>
-<p>Here we can see the threads from an specific category, they should be links and when clicked will show the specific thread and the comments that belong to the threads and how many likes have</p>
-<p>Below we should create a box to write a new comment for that thread</p>
-<p><Comments/></p>
-</div>
-
-);
+         `)
+  
+         console.log(result.data)
+  
+         setElements(result.data)
+         setIsLoading(false)
+       }
+  
+       fetchElements()
+    },  [])
+    
+    return (
+        <div className='container'>
+            <h1>Threads</h1>
+            <ThreadsTable isLoading={isLoading} items={elements} />
+          
+        </div>
+      ) 
+    }
 
 
 

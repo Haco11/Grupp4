@@ -1,20 +1,42 @@
-import React from 'react';
-import Category from '../Category'
+
+
+import React, { useEffect , useState } from 'react';
+import axios from 'axios';
+import CategoryTable from '../CategoryTable';
+//import Threads from '../Threads';
 
 
 
-const Forum = () => (
+
+const Forum = () => {
 
 
-  <div> 
-   <h1>Forum</h1>
-  <li>
-  <Category/>
-  </li>
-  </div>
+  const [items, setItems] = useState([])
+  const [isLoading, setIsLoading] = useState (true)
+  
+  useEffect(() => {
+     const fetchItems = async () => {
+       const result = await axios(`https://forum-api-jkrop.ondigitalocean.app/sandbox/Group4/category
+       `)
+
+       console.log(result.data)
+
+       setItems(result.data)
+       setIsLoading(false)
+     }
+
+     fetchItems()
+  },  [])
+  
+  return (
+      <div className='container'>
+          <h1>Category List</h1>
+          <CategoryTable isLoading={isLoading} items={items} />
+      
+        
+      </div>
+    ) 
+  }
     
-  );
-  
-  
   
   export default Forum;

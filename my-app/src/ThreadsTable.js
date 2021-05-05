@@ -1,15 +1,14 @@
 import React from 'react'
 
-const CategoryTable = ({ items, isLoading}) => {
+const ThreadsTable = ({ elements, isLoading}) => {
     return isLoading ? (<h1>Loading...</h1>) : (<section className="categories">
-      {items.map(item => (
+      {elementss.map(element => (
          <div>
-         <h3>{item.name}</h3>
-          <h4>{item.threads}</h4>
+         <h4>{element.title}</h4>
           </div>
       ))}
 
     </section>)
 }
 
-export default CategoryTable
+export default ThreadsTable
