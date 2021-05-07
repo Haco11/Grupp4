@@ -1,9 +1,9 @@
 
-
 import React, { useEffect , useState } from 'react';
 import axios from 'axios';
 import CategoryTable from '../CategoryTable';
-//import Threads from '../Threads';
+import Threads from '../Threads';
+//import {Link} from 'react-router-dom';
 
 
 
@@ -32,7 +32,8 @@ const Forum = () => {
       <div className='container'>
           <h1>Category List</h1>
           <CategoryTable isLoading={isLoading} items={items} />
-      
+          <Threads />
+          
         
       </div>
     ) 
