@@ -1,12 +1,16 @@
 import React from 'react'
+import {Route, BrowserRouter as Router, Link} from "react-router-dom"
 
 const CategoryTable = ({ items, isLoading}) => {
+
     return isLoading ? (<h1>Loading...</h1>) : (<section className="categories">
       {items.map(item => (
+         <Router>
          <div>
-         <h3>{item.name}</h3>
-          <h4>{item.threads}</h4>
-          </div>
+        <li><Link to="/"> {item.name}</Link></li>
+        <Route path="/" component={item.name}/>
+        </div>
+        </Router>
       ))}
 
     </section>)
