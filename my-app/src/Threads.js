@@ -1,7 +1,7 @@
 import React, { useEffect , useState } from 'react';
 import axios from 'axios';
 import ThreadsTable from './ThreadsTable'
-
+import Thread from './Thread'
 
 
 const Threads = () => 
@@ -34,7 +34,7 @@ const Threads = () =>
         <div className='container'>
             <h1>Threads</h1>
             <ThreadsTable isLoading={isLoading} elements={elements} />
-          
+            <Thread/>
         </div>
       ) 
     }

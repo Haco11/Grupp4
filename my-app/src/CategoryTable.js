@@ -9,7 +9,7 @@ const CategoryTable = ({ items, isLoading}) => {
          <div>
         <li><Link to="/"> {item.name}</Link></li>
         <Route path="/" component={item.name}/>
-        </div>
+        </div> 
         </Router>
       ))}
 
