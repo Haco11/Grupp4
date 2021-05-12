@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch , useSelector} from 'react-redux'
-import { loadThreads, setTitle, postThread  } from './redux/threadSlice';
+import { loadThreads, setTitle, setContent, setCreatedBy, postThread  } from './redux/threadSlice';
 
 const Thread = () => {
      
@@ -16,15 +16,12 @@ const Thread = () => {
 
     return  (
     <>
-     <h3>Thread</h3>
-     <ul>
-     {threads.map(thread =>(
-         <li key={thread.createdBy}>{thread.title}</li>
-     ))}
+     <h1>Thread form</h1>
      
-      </ul>
-      <h2>Add new thread</h2>
-      <input type="text" placeholder="Write here..." onChange={(event) => dispatch(setTitle(event.target.value)) } ></input>
+      <h4>Add new thread</h4>
+      <input type="text" placeholder="Write title..." onChange={(event) => dispatch(setTitle(event.target.value)) } ></input>
+      <input type="text" placeholder="Write content..." onChange={(event) => dispatch(setContent(event.target.value)) } ></input>
+      <input type="text" placeholder="Created by..." onChange={(event) => dispatch(setCreatedBy(event.target.value)) } ></input>
       <button onClick={() => dispatch(postThread(addThreadForm))}>Create thread</button>
     </>
 );

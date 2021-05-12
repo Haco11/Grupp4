@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     data: [],
-    addThreadForm: {
+    addCommentForm: {
       title: '',
       content: '',
       createdBy: ''
@@ -10,64 +10,64 @@ const initialState = {
 };
 
 // First, create the thunk
-export const loadThreads = createAsyncThunk(
-  'thread/loadThreads',
+export const loadComments = createAsyncThunk(
+  'comm/loadComments',
   async (url, thunkAPI) => {
-    const response = await fetch("https://forum-api-jkrop.ondigitalocean.app/category/6092645ee747d9001dee9785/thread");
+    const response = await fetch("https://forum-api-jkrop.ondigitalocean.app/thread/609275bee747d9001dee9792/comment");
     const data = await response.json();
 
     return data;
   }
 )
 
-export const postThread = createAsyncThunk(
-  'thread/postThread',
-  async (thread, thunkAPI) => {
+export const postComment = createAsyncThunk(
+  'comment/postComment',
+  async (comment, thunkAPI) => {
     const response = await fetch("https://forum-api-jkrop.ondigitalocean.app/category/6092645ee747d9001dee9785/thread",  {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
       },
-      body: JSON.stringify(thread)
+      body: JSON.stringify(comment)
     });
-    const createdThread = await response.json();
+    const createdComment = await response.json();
 
-    return createdThread;
+    return createdComment;
   }
 )
 
 // Then, handle actions in your reducers:
-const threadSlice = createSlice({
-  name: 'thread',
+const commentSlice = createSlice({
+  name: 'comment',
   initialState,
   reducers: {
     updateSortBy(state, action) {
         state.sortBy = action.payload;
     },
     setTitle(state, action) {
-      state.addThreadForm.title = action.payload;
+      state.addCommentForm.title = action.payload;
     },
     setContent(state, action) {
-        state.addThreadForm.content = action.payload;
+        state.addCommentForm.content = action.payload;
       },
     setCreatedBy(state, action) {
-        state.addThreadForm.createdBy = action.payload;
+        state.addCommentForm.createdBy = action.payload;
       }
 
 },
   extraReducers: {
     // Add reducers for additional action types here, and handle loading state as needed
-    [loadThreads.fulfilled]: (state, action) => {
+    [loadComments.fulfilled]: (state, action) => {
       // Add user to the state array
       state.data = action.payload;
     },
-    [postThread.fulfilled]: (state, action) => {
+    [postComment.fulfilled]: (state, action) => {
       // Add user to the state array
       state.data.push(action.payload);
-      state.addThreadForm = initialState.addThreadForm;
+      state.addCommentForm = initialState.addCommentForm;
     }
   }
 })
 
-export const { updateSortBy, setTitle, setContent, setCreatedBy } = threadSlice.actions;
-export default threadSlice.reducer;
+export const { updateSortBy, setTitle, setContent, setCreatedBy } = commentSlice.actions;
+export default commentSlice.reducer;

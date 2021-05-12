@@ -1,7 +1,7 @@
 import React, { useEffect , useState } from 'react';
 import axios from 'axios';
 import ThreadsTable from './ThreadsTable'
-import Thread from './Thread'
+import Thread from './ThreadFrom'
 
 
 const Threads = () => 
@@ -16,7 +16,7 @@ const Threads = () =>
       
 
        const fetchElements = async () => {
-         const result = await axios(`https://forum-api-jkrop.ondigitalocean.app/category/60925471e747d9001dee977f/thread
+         const result = await axios(`https://forum-api-jkrop.ondigitalocean.app/category/6092645ee747d9001dee9785/thread
 
 
          `)
@@ -34,7 +34,7 @@ const Threads = () =>
         <div className='container'>
             <h1>Threads</h1>
             <ThreadsTable isLoading={isLoading} elements={elements} />
-            <Thread/>
+            <Thread/> 
         </div>
       ) 
     }
