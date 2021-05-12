@@ -3,6 +3,7 @@ import {Route, BrowserRouter as Router, Link} from "react-router-dom"
 
 
 
+
 const CategoryTable = ({ items, isLoading}) => {
 
     return isLoading ? (<h1>Loading...</h1>) : (<section className="categories">
@@ -17,5 +18,4 @@ const CategoryTable = ({ items, isLoading}) => {
 
     </section>)
 }
-
-export default CategoryTable
+export default CategoryTable;

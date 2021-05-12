@@ -4,7 +4,7 @@ info:
   description: Backend for creating SPA React Forum
   version: '1.0'
 servers:
-  - url: https://forum-api-jkrop.ondigitalocean.app
+  - url: https://forum-api-jkrop.ondigitalocean.app/sandbox
     description: Production environment
   - url: http://localhost:8080
     description: Local environment

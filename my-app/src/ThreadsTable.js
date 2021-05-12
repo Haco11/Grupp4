@@ -15,4 +15,4 @@ const ThreadsTable = ({ elements, isLoading}) => {
     </section>)
 }
 
-export default ThreadsTable
+export default ThreadsTable;

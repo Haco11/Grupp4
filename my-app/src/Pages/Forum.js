@@ -2,6 +2,8 @@ import React, { useEffect , useState } from 'react';
 import axios from 'axios';
 import CategoryTable from '../CategoryTable';
 import Threads from '../Threads';
+import Comments from '../Comments';
+
 //import {Link} from 'react-router-dom';
 
 
@@ -27,11 +29,12 @@ const Forum = () => {
   
   return (
       <div className='container'>
-          <h1>Categories</h1>
+          <h1>Category</h1>
           <CategoryTable isLoading={isLoading} items={items} />
           <Threads />
-          
-        
+          <Comments />
+
+
       </div>
     ) 
   }
