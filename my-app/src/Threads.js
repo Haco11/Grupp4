@@ -19,7 +19,7 @@ const Threads = () =>
       
 
        const fetchElements = async () => {
-         const result = await axios("https://forum-api-jkrop.ondigitalocean.app/category/6092645ee747d9001dee9785/thread"+ url +"/thread")
+         const result = await axios("https://forum-api-jkrop.ondigitalocean.app/category/6092645ee747d9001dee9785/thread")
   
          console.log(result.data)
   
