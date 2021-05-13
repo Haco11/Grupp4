@@ -1,6 +1,6 @@
 html,
 body {
-  height: fill;
+  height: stretch;
   margin: 0px;
   background: rgba(0, 0, 0, 0.94);
 }

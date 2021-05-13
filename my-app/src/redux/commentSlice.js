@@ -23,7 +23,7 @@ export const loadComments = createAsyncThunk(
 export const postComment = createAsyncThunk(
   'comment/postComment',
   async (comment, thunkAPI) => {
-    const response = await fetch("https://forum-api-jkrop.ondigitalocean.app/category/6092645ee747d9001dee9785/thread",  {
+    const response = await fetch("https://forum-api-jkrop.ondigitalocean.app/thread/609275bee747d9001dee9792/comment",  {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
