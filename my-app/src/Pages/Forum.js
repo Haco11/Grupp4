@@ -3,8 +3,9 @@ import axios from 'axios';
 import CategoryTable from '../CategoryTable';
 import Threads from '../Threads';
 import Comments from '../Comments';
-
 //import {Link} from 'react-router-dom';
+
+
 
 
 const Forum = () => {
@@ -29,12 +30,11 @@ const Forum = () => {
   
   return (
       <div className='container'>
-          <h1>Category</h1>
           <CategoryTable isLoading={isLoading} items={items} />
           <Threads />
-          <Comments />
-
-
+          <Comments/>
+          
+        
       </div>
     ) 
   }

@@ -5,13 +5,13 @@ import Contact from "./Pages/Contact"
 import Forum from "./Pages/Forum"
 
 
-
 function App() {
     return (
       <Router>
         <div className="routeContainer">
           <nav>
             <ul>
+                <img className="Header-logo" src="/logo.png" alt="Logo" />
                 <li><Link to="/Home">Home</Link></li>
                 <li><Link to="/Forum">Forum</Link></li>
                 <li><Link to="/Contact">Contact</Link></li>

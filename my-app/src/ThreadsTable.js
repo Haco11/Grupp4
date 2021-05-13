@@ -2,7 +2,7 @@ import React from 'react'
 import {Route, BrowserRouter as Router, Link} from "react-router-dom"
 
 const ThreadsTable = ({ elements, isLoading}) => {
-    return isLoading ? (<h1>Loading...</h1>) : (<section className="threads">
+    return (<section className="threads">
       {elements.map(element => (
          <Router>
          <div>
@@ -15,4 +15,4 @@ const ThreadsTable = ({ elements, isLoading}) => {
     </section>)
 }
 
-export default ThreadsTable;
+export default ThreadsTable

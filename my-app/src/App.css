@@ -1,33 +1,141 @@
 html,
 body {
-  background: #000 url('img/bg.jpg') no-repeat center center/cover;
+  height: stretch;
+  margin: 0px;
+  background: rgba(0, 0, 0, 0.94);
+  text-align: center;
+  
 }
 
 .routeContainer {
-  padding: 10px;
+  padding: 0px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center; 
+  color: white;
 }
 
-ul
-{
+.HomeText {
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.routeContainer nav {
+  height: 96px;
+  left: 0px;
+  top: 0px;
+  background: #fca311;
+  padding: 10px;
+  margin: 0px;
+  font-display: inline;
+}
+ul {
   list-style-type: none;
-  font-size: 38px;
-  color: black;
+  font-size: 30px;
+  color: white;
   letter-spacing: 3px;
+  display: inline;
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 50px;
-    
+
+  /*
+  padding: 0px;
+  margin: 250px;
+  /* text-align: start; */
+}
+
+.RouterLinks li {
+  position: relative;
+  display: inline;
+  float: left;
+  width: 150px;
+  top: 45px;
+  left: 180px;
+  display: flex;
+  align-items: center;
+
 }
 
 a {
-  color: rgb(0, 0, 0);
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+  color: white;
+  display: inline;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.categories  {
+  position: absolute;
+  top: 195px;
+  right: 10px;
+  font-size: 45px;
+}
+
+a:link {
+  text-decoration-line: none;
+}
+
+.categories {
+  position: absolute;
+  left: 100px;
 }
 
 .container {
   text-align: left;
   list-style-type: none;
-
+  color: white;
 }
+
+.categoryBox {
+  position: relative;
+  width: 700px;
+  height: 50px;
+  left: 115px;
+  top: 45px;
+  background: #14213d;
+  border-radius: 67px;
+}
+
+.container h1 {
+  position: absolute;
+  left: 45px;
+  top: -15px;
+}
+
+.RouterLinks h1 {
+  color: white;
+}
+.routeContainer img {
+  position: absolute;
+  width: 100px;
+  height: 62px;
+  left: 20px;
+  top: 22px;
+}
+
+/* display none i container threads här under ska tas bort för att visa namnet på trådarna*/
+.container .threads {
+ display: none;
+}
+
+.ContactInfo {
+  color: white;
+}
+
+.Navbar {
+  position: absolute;
+  width: 1440px;
+  height: 96px;
+  left: 0px;
+  top: 0px;
+
+  background: #fca311;
+}
+title {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+ }
