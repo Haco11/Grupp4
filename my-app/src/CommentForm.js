@@ -16,7 +16,10 @@ const Comment = () => {
 
     return  (
     <>
+<<<<<<< HEAD
+=======
      <h3>Comment</h3>
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6
      <ul>
      {comments.map(comment =>(
          <div>
