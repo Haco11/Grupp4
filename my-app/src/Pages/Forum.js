@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6
 import React, { useEffect , useState } from 'react';
 import axios from 'axios';
 import CategoryTable from '../CategoryTable';
@@ -30,6 +34,10 @@ const Forum = () => {
   
   return (
       <div className='container'>
+<<<<<<< HEAD
+=======
+          <h1>Category List</h1>
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6
           <CategoryTable isLoading={isLoading} items={items} />
           <Threads />
           <Comments/>

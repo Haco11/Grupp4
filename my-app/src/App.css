@@ -3,17 +3,26 @@ body {
   height: stretch;
   margin: 0px;
   background: rgba(0, 0, 0, 0.94);
+<<<<<<< HEAD
   text-align: center;
   
 }
 
+=======
+}
+/*
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6
 .routeContainer {
   padding: 0px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center; 
   color: white;
 }
+<<<<<<< HEAD
 
+=======
+*/
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6
 .HomeText {
   padding: 0px;
   font-family: Arial, Helvetica, sans-serif;
@@ -26,7 +35,11 @@ body {
   left: 0px;
   top: 0px;
   background: #fca311;
+<<<<<<< HEAD
   padding: 10px;
+=======
+  padding: 0px;
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6
   margin: 0px;
   font-display: inline;
 }
@@ -36,9 +49,12 @@ ul {
   color: white;
   letter-spacing: 3px;
   display: inline;
+<<<<<<< HEAD
   display: grid;
   grid-template-columns: auto auto auto;
 
+=======
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6
   /*
   padding: 0px;
   margin: 250px;
@@ -52,9 +68,12 @@ ul {
   width: 150px;
   top: 45px;
   left: 180px;
+<<<<<<< HEAD
   display: flex;
   align-items: center;
 
+=======
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6
 }
 
 a {
@@ -130,6 +149,7 @@ a:link {
 
   background: #fca311;
 }
+<<<<<<< HEAD
 title {
   display: block;
   font-size: 2em;
@@ -139,3 +159,5 @@ title {
   margin-right: 0;
   font-weight: bold;
  }
+=======
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6

@@ -32,6 +32,10 @@ const Threads = () =>
     
     return (
         <div className='container'>
+<<<<<<< HEAD
+=======
+            <h1>Threads</h1>
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6
             <ThreadsTable isLoading={isLoading} elements={elements} />
             <Thread/> 
         </div>
