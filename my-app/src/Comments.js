@@ -27,7 +27,11 @@ const Comments = () => {
     
 
 return(
+<<<<<<< HEAD
+ <div>
+=======
  <div><h3>Comments</h3>
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6
  <CommentsTable isLoading={isLoading} comments={comments} />
 
 <CommentForm/>

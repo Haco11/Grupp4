@@ -16,7 +16,11 @@ const Thread = () => {
 
     return  (
     <>
+<<<<<<< HEAD
+     <title>Thread form</title>
+=======
      <h1>Thread form</h1>
+>>>>>>> 6e0ef6cbf85186be402933b050c72135527feeb6
      
       <h4>Add new thread</h4>
       <input type="text" placeholder="Write title..." onChange={(event) => dispatch(setTitle(event.target.value)) } ></input>
